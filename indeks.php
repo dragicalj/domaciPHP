@@ -11,7 +11,10 @@ if(isset($_POST['username']) && isset($_POST['password'])){
    
     $korisnik = new User(1, $uname, $upass);
     
-    $odg = User::logInUser($korisnik, $conn); 
+    $odg = User::logInUser($korisnik, $conn);
+	while ($red = $odg->fetch_object()) {
+        $korisnik->id = $red->id;
+    } 
 
     if($odg->num_rows==1){
         echo  `
