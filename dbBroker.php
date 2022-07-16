@@ -1,10 +1,10 @@
 <?php
 $host = "localhost";
-$db = "domaciphp";
+$db = "kozmetickisalon";
 $user = "root";
-$pass = "";
+$pass = "gaga";
 
-$conn = new mysqli($host,$user,$pass,$db, 3307);
+$conn = new mysqli($host,$user,$pass,$db);
 
 
 if ($conn->connect_errno){
